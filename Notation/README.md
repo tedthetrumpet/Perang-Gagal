@@ -1,5 +1,2 @@
-# Perang Gagal
- A repository of SuperCollider code, audio samples, and musical notation related to ‘Perang Gagal: a Series of Inconclusive Battles’ as performed at the International Conference on Livecoding (ICLC) Limerick 2020.
-
- J Simon van der Walt
- Composer
+# Perang Gagal – Notation
+ Notation used during the collaborative process for the three sections of the piece: Adrift & Afloat, divi2ions and obse66ive.
