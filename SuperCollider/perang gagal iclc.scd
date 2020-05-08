@@ -1,5 +1,3 @@
-~snip.("logo")
-
 /* _          _ _   _        _                            _
   | |_ ___ __| | |_| |_  ___| |_ _ _ _  _ _ __  _ __  ___| |_
   |  _/ -_) _` |  _| ' \/ -_)  _| '_| || | '  \| '_ \/ -_)  _|
@@ -12,16 +10,18 @@ P.all.do(_.clear);
 t.tempo_(95/60);
 s.latency_(0.05);
 
+// kempul introduction to adrift & afloat
 // buka (jangan lupa – ageng tiga kali!)
 P(\intro, \i, \bf, \b, ~arum[33].repeat(7), \a, 0.6, \l, 1.1).play.quant_(1)
 
+// execute big gong, also chooses next kempul
 // variasi ageng, ganti kempul
 (
 (i: \bf, b: ~arum.at(39), strum: 0.02.rrand(0.05), o: ([4,5] + {0.07.rand}.dup(2)), a: 0.1.rrand(0.3) + 0.6).play;
 ~kempul = ~arum[33..36].choose;
 )
 
-(i: \bf, b: ~kempul, a: 0.5 + 0.1.rrand(0.5) ).play // kempul
+(i: \bf, b: ~kempul, a: 0.5 + 0.1.rrand(0.5) ).play // execute kempul
 
 // notasi
 [7] <7> [7] <7> [7] <7> x
@@ -52,10 +52,10 @@ P(\count, \count, (1..32).pseq, \rest, \, \print, Pfunc({ |e| e.at(\count).postl
 
 P(\sek, \i, \slice, \amp, 0.3, \l, 1.1)
 P(\sek, \buf, Pindex(~arum, [25,18] + {Pbrown(1,7,1,16).iterN(16).pseq(4)}.plazy.repeat)) // gembyang
-P(\sek, \dur, 1/2).quant_(1)
-P(\sek, \dur, 1/4)
+P(\sek, \dur, 1/2).quant_(1) // irama 1/2
+P(\sek, \dur, 1/4) // irama 1
 P(\sek, \o, 5)
-P(\sek).play.stop
+P(\sek).play
 
 // initial tempo is 120/60 = 2
 // change down irama over 16 beats, execute just before beat 16
@@ -75,14 +75,14 @@ P(\pul, \i, \bf, \rpt, 1.repeat(1)).play;
 )
 
 // uji balungan saja
-P(\bal, \i, \slice, \a, 0.7, \l, 1.1, \buf, ~arum.at(18+[1,2,4,3,6,2,7,2, 3,5,6,1,2,7,5,4,3,2]).pseq, \dur, (2!14 ++ (1!4)).flat.pseq).play.stop
+// P(\bal, \i, \slice, \a, 0.7, \l, 1.1, \buf, ~arum.at(18+[1,2,4,3,6,2,7,2, 3,5,6,1,2,7,5,4,3,2]).pseq, \dur, (2!14 ++ (1!4)).flat.pseq).play.stop
 
 /////////////////////////////////////// bag 03 'obse66ive'
 
 P.all.do(_.clear)
 P.defaultQuant_(6)
 
-t.tempo_(75*2/60) // rehearsal tempo was 70
+t.tempo_(75*2/60)
 (
 P(\tuk, \i, \bf, \b, ~arum[68], \a, 0.95, \dur, 1).play;
 P(\count, \count, (1..6).pseq, \rest, \, \print, Pfunc({ |e| e.at(\count).postln})).play;
@@ -124,14 +124,14 @@ P(\polos, \a, 0.0); P(\sangsih, \a, 0.0); P(\g).stop; P(\p).stop; P(\tuk).stop; 
 P(\gran, \type, \set, \id, ~gran.nodeID, \args, #[\buf, \rate, \freq, \amp, \out]);
 )
 (// fade in
-{P(\gran, \buf, [~l2[48]], \rate, -0.05, \dur, 1/4, \amp,  0.2 * (0..100).pseq(1)/100).quant_(0).play; // fade in
+{P(\gran, \buf, [~l2[0]], \rate, -0.05, \dur, 1/4, \amp,  0.2 * (0..100).pseq(1)/100).quant_(0).play; // fade in
 	(1/4*100).wait; "in".postln; P(\gran, \amp, 0.2)}.fork
 )
 
 P(\gran, \amp, 0.2)
 P(\gran, \amp,  0.2 * (0..100).reverse.pseq(1)/100, \dur, 1/2).quant_(0); // fade out
 
-(
+(// gong
 (i: \bf, b: ~arum.at(39), strum: 0.02.rrand(0.05), o: ([4,5] + {0.07.rand}.dup(2)), a: 0.1.rrand(0.3) + 0.7).play;
 )
 
