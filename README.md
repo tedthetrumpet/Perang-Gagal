@@ -1,7 +1,7 @@
 # Perang Gagal
- A repository of SuperCollider code, audio samples, and musical notation related to ‘Perang Gagal: a Series of Inconclusive Battles’ as performed at the International Conference on Livecoding (ICLC) Limerick 2020.
 
- (But, this repo is a work in progress, none of this ready to use yet…!)
+‘**Perang Gagal: a Series of Inconclusive Battles**’ was a performance that juxtaposed livecoded ‘gamelan’ music created on the fly in SuperCollider with music played live on real gamelan instruments.
 
- J Simon van der Walt
- Composer
+The title refers to a traditional set-piece scene from the Javanese _wayang kulit_ shadow-play repertoire. Taken literally, this scene represents a series of skirmishes between characters from opposing armies, none of whom emerge clearly victorious. Metaphorically it might be taken to represent a transition between youth, as represented by the first _pathet nem_ scene, to the middle age of _pathet sångå_, while in contemporary styles it is an entertaining crowd pleaser that allows the _dhalang_ puppeteer to show off their skill in manipulating the puppets. 
+
+In the context of [the performance at ICLC](https://youtu.be/N6PXoRHwWFY), the title also hints at a number of tensions: between laptop and acoustic instruments, between improvising in code and improvising instrumentally, and between cultural contexts. The piece was devised and performed in collaboration with Professor Mel Mercier of the Irish Word Academy of Music and Dance, drawing on staff and students at that institution for the live gamelan parts.

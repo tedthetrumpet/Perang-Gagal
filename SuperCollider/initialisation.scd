@@ -18,8 +18,6 @@
 
 */
 
-
-
 //setup
 Pdef.clear; Pdefn.clear; Ndef.clear;
 // quantize changes to even four beat bars

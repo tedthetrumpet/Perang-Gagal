@@ -5,7 +5,7 @@
 @tedthetrumpet - Glasgow - Scotland          |_|              */
 ////////////////////////////////////////////////////////////////
 
-//////////////////////// bag 01 'adrift & afloat''
+//////////////////////// bag 01 'adrift & afloat'
 P.all.do(_.clear);
 t.tempo_(95/60);
 s.latency_(0.05);
