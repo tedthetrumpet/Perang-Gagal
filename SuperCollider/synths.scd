@@ -1,4 +1,4 @@
-SynthDef(\slice, { |out, gate=1, buf, slices=16, slice=0, freq = (60.midicps), amp=0.1, pan=0.0, loop=0, rev=0, attack=0.01, release 0.1 |
+SynthDef(\slice, { |out, gate=1, buf, slices=16, slice=0, freq = (60.midicps), amp=0.1, pan=0.0, loop=0, rev=0, attack=0.01, release=0.1 |
 	var myenv, env, start, len, basefreq = 60.midicps, rate, sig;
 	rate = freq / basefreq;
 	len = BufFrames.kr(buf);
@@ -25,7 +25,3 @@ SynthDef(\warp, {|buf = #[0,0], rate = 1, freq = (60.midicps), amp= 0.1, out=0|
 	Out.ar(out, sig * amp);
 }).add;
 );
-
-
-
-
