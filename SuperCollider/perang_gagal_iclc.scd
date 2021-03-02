@@ -138,4 +138,4 @@ P(\gran, \amp,  0.2 * (0..100).reverse.pseq(1)/100, \dur, 1/2).quant_(0); // fad
 P.all.do(_.clear);
 ~gran.free;
 
-vim: syntax=supercollider
+// vim: syntax=supercollider
